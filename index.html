@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.css">
+    
+</head>
+<body>
+    <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="navbar">
+            <h2 class="navbar__title">All the movies</h2>
+            <div class="navbar___change-theme">
+              <button>
+                <i class="fa-regular fa-moon"></i>
+                <span>Dark Mode</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="header__inputs">
+        <div class="container">
+          <form class="search-box" id="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              placeholder="Search for a movie..."
+              class="search-movie"
+              id="search-movie"
+              required
+            />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="loading">
+      <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+    <div class="notFoundMessage">no information found</div>
+    <div class="movies">
+        <h1 class="movies__title">Watch movies</h1>
+        <div class="container">
+            <select class="movies__select" name="movies" id="movies">
+                <option value="popularity-desc">popularity.desc</option>
+                <option value="popularity-asc">popularity.asc</option>
+                <option value="revenue-desc">revenue.desc</option>
+                <option value="revenue-asc">revenue.asc</option>
+                <option value="primary_release_date.asc">primary_release_date.asc</option>
+                <option value="primary_release_date.desc">primary_release_date.desc</option>
+                <option value="vote_average.asc">vote_average.asc</option>
+                <option value="vote_average.desc">vote_average.desc</option>
+                <option value="vote_count.asc">vote_count.asc</option>
+                <option value="vote_count.desc">vote_count.desc</option>
+            </select>
+            <div class="movies__container">
+                <!-- <div class="movie__box">
+                    <img
+              src="https://avatars.mds.yandex.net/i?id=e26b6a7a3669e2d19c0eaf57c73bab6a87360ee7-10018235-images-thumbs&n=13"
+              alt="afganistan__flag"
+            />
+            
+            <h2 class="movie__name">Afganistan</h2>
+            <p class="movie__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod illum harum quibusdam nulla dolorem nobis ipsa, inventore eum animi ipsum. <button class="read-more">...read more</button></p>
+               <h3 class="movie__rating">67.1</h3>
+                </div>
+                <div class="movie__box">
+                    <img
+              src="https://avatars.mds.yandex.net/i?id=e26b6a7a3669e2d19c0eaf57c73bab6a87360ee7-10018235-images-thumbs&n=13"
+              alt="afganistan__flag"
+            />
+            
+            <h2 class="movie__name">Afganistan</h2>
+            <p class="movie__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod illum harum quibusdam nulla dolorem nobis ipsa, inventore eum animi ipsum. <button class="read-more">...read more</button></p>
+              <h3 class="movie__rating">67.1</h3>
+                </div>
+                <div class="movie__box">
+                    <img
+              src="https://avatars.mds.yandex.net/i?id=e26b6a7a3669e2d19c0eaf57c73bab6a87360ee7-10018235-images-thumbs&n=13"
+              alt="afganistan__flag"
+            />
+            
+            <h2 class="movie__name">Afganistan</h2>
+            <p class="movie__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod illum harum quibusdam nulla dolorem nobis ipsa, inventore eum animi ipsum. <button class="read-more">...read more</button></p>
+                 <h3 class="movie__rating">67.1</h3>
+        </div>
+                <div class="movie__box">
+                    <img
+              src="https://avatars.mds.yandex.net/i?id=e26b6a7a3669e2d19c0eaf57c73bab6a87360ee7-10018235-images-thumbs&n=13"
+              alt="afganistan__flag"
+            />
+            
+            <h2 class="movie__name">Afganistan</h2>
+            <p class="movie__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod illum harum quibusdam nulla dolorem nobis ipsa, inventore eum animi ipsum. <button class="read-more">...read more</button></p>
+                  <h3 class="movie__rating">67.1</h3>
+        </div>
+                <div class="movie__box">
+                    <img
+              src="https://avatars.mds.yandex.net/i?id=e26b6a7a3669e2d19c0eaf57c73bab6a87360ee7-10018235-images-thumbs&n=13"
+              alt="afganistan__flag"
+            />
+            
+            <h2 class="movie__name">Afganistan</h2>
+            <p class="movie__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod illum harum quibusdam nulla dolorem nobis ipsa, inventore eum animi ipsum. <button class="read-more">...read more</button></p>
+                  <h3 class="movie__rating">67.1</h3>
+        </div>
+                <div class="movie__box">
+                    <img
+              src="https://avatars.mds.yandex.net/i?id=e26b6a7a3669e2d19c0eaf57c73bab6a87360ee7-10018235-images-thumbs&n=13"
+              alt="afganistan__flag"
+            />
+            
+            <h2 class="movie__name">Afganistan</h2>
+            <p class="movie__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod illum harum quibusdam nulla dolorem nobis ipsa, inventore eum animi ipsum. <button class="read-more">...read more</button></p>
+                  <h3 class="movie__rating">67.1</h3>
+        </div>
+                <div class="movie__box">
+                    <img
+              src="https://avatars.mds.yandex.net/i?id=e26b6a7a3669e2d19c0eaf57c73bab6a87360ee7-10018235-images-thumbs&n=13"
+              alt="afganistan__flag"
+            />
+            
+            <h2 class="movie__name">Afganistan</h2>
+            <p class="movie__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod illum harum quibusdam nulla dolorem nobis ipsa, inventore eum animi ipsum. <button class="read-more">...read more</button></p>
+                  <h3 class="movie__rating">67.1</h3>
+        </div> -->
+    
+            </div>
+              <ul class="pagination">
+               </ul>
+        </div>
+    </div>
+
+
+    <script src="./js/script.js"></script>
+    <script src="./js/pagination.js"></script>
+    <script src="./js/sort_by.js"></script>
+</body>
+</html>
