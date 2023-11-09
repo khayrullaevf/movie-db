@@ -7,8 +7,7 @@ const moviesDiscoverURL_page7 = `https://api.themoviedb.org/3/discover/movie?inc
 const moviesDiscoverURL_page8 = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=8&sort_by=popularity.desc`;
 const moviesDiscoverURL_page9 = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=9&sort_by=popularity.desc`;
 const moviesDiscoverURL_page10 = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=10&sort_by=popularity.desc`;
-
-const pagination = document.querySelector(".pagination");
+ const pagination = document.querySelector(".pagination");
 const page_1 = document.createElement("li");
 page_1.textContent = 1;
 const page_2 = document.createElement("li");
@@ -117,3 +116,5 @@ page_10.addEventListener("click", () => {
   page_10.style.backgroundColor = "blue";
   page_10.style.color = "#fff";
 });
+
+

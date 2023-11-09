@@ -87,6 +87,7 @@ nav {
   color: rgb(223, 228, 232);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  cursor: pointer;
 }
 .search-movie {
   border: none;

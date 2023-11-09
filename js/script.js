@@ -22,7 +22,6 @@ const options = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNzBjOTc0ZmNkODQwMTQ5YWRiMDNiZGE5MThlZDFkNyIsInN1YiI6IjY1NGE1OWRiNmJlYWVhMDE0YjY5YjU1OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._4moZnrhiJI_qfVRB_7O2_PgpwAfIP5hMSDzUgyDCwM",
   },
 };
-
 // fetch(
 //   "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc",
 //   options
@@ -133,6 +132,7 @@ function renderMovies(url) {
     found = true;
   });
   loading.style.display = "none";
+
   if (!found) {
     notFoundMessage.style.display = "block";
     notFoundMessage.style.position = "fixed";
@@ -144,6 +144,7 @@ function renderMovies(url) {
   } else {
     notFoundMessage.style.display = "none";
     loading.style.display = "none";
+
   }
 }
 
